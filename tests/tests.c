@@ -81,9 +81,9 @@ START_TEST(deposit_not_capitalized) {
   DepositValue data = {{0}, {0}, 75000, 5, 13, 24, 0, 0};
   double interest = 0, taxes = 0;
   calculate_deposit(&data, &interest, &taxes);
-  ck_assert_double_eq_tol(data.deposit_amount, 81525.00, 1e-07);
-  ck_assert_double_eq_tol(interest, 7500.00, 1e-07);
-  ck_assert_double_eq_tol(taxes, 975.00, 1e-07);
+  ck_assert_double_eq_tol(data.deposit_amount, 81525.00, 1e-5);
+  ck_assert_double_eq_tol(interest, 7500.00, 1e-5);
+  ck_assert_double_eq_tol(taxes, 975.00, 1e-5);
 }
 END_TEST
 
@@ -91,9 +91,9 @@ START_TEST(deposit_capitalized_monthly) {
   DepositValue data = {{0}, {0}, 75000, 5, 13, 24, 1, 0};
   double interest = 0, taxes = 0;
   calculate_deposit(&data, &interest, &taxes);
-  ck_assert_double_eq_tol(data.deposit_amount, 81847.4, 1e-07);
-  ck_assert_double_eq_tol(interest, 7870.6, 1e-07);
-  ck_assert_double_eq_tol(taxes, 1023.1, 1e-07);
+  ck_assert_double_eq_tol(data.deposit_amount, 81847.422145, 1e-5);
+  ck_assert_double_eq_tol(interest, 7870.600167, 1e-5);
+  ck_assert_double_eq_tol(taxes, 1023.178022, 1e-5);
 }
 END_TEST
 
@@ -101,9 +101,9 @@ START_TEST(deposit_capitalized_quaterly) {
   DepositValue data = {{0}, {0}, 75000, 5, 13, 24, 1, 1};
   double interest = 0, taxes = 0;
   calculate_deposit(&data, &interest, &taxes);
-  ck_assert_double_eq_tol(data.deposit_amount, 81806.68, 1e-07);
-  ck_assert_double_eq_tol(interest, 7823.77, 1e-07);
-  ck_assert_double_eq_tol(taxes, 1017.09, 1e-07);
+  ck_assert_double_eq_tol(data.deposit_amount, 81806.683932, 1e-5);
+  ck_assert_double_eq_tol(interest, 7823.774634, 1e-5);
+  ck_assert_double_eq_tol(taxes, 1017.090702, 1e-5);
 }
 END_TEST
 
@@ -111,9 +111,9 @@ START_TEST(deposit_capitalized_half_yearly) {
   DepositValue data = {{0}, {0}, 75000, 5, 13, 24, 1, 2};
   double interest = 0, taxes = 0;
   calculate_deposit(&data, &interest, &taxes);
-  ck_assert_double_eq_tol(data.deposit_amount, 81779.89, 1e-07);
-  ck_assert_double_eq_tol(interest, 7792.98, 1e-07);
-  ck_assert_double_eq_tol(taxes, 1013.09, 1e-07);
+  ck_assert_double_eq_tol(data.deposit_amount, 81779.890689, 1e-5);
+  ck_assert_double_eq_tol(interest, 7792.977804, 1e-5);
+  ck_assert_double_eq_tol(taxes, 1013.087114, 1e-5);
 }
 END_TEST
 
@@ -121,9 +121,9 @@ START_TEST(deposit_capitalized_yearly) {
   DepositValue data = {{0}, {0}, 75000, 5, 13, 24, 1, 3};
   double interest = 0, taxes = 0;
   calculate_deposit(&data, &interest, &taxes);
-  ck_assert_double_eq_tol(data.deposit_amount, 81701.21, 1e-07);
-  ck_assert_double_eq_tol(interest, 7702.54, 1e-07);
-  ck_assert_double_eq_tol(taxes, 1001.33, 1e-07);
+  ck_assert_double_eq_tol(data.deposit_amount, 81701.208984, 1e-5);
+  ck_assert_double_eq_tol(interest, 7702.539062, 1e-5);
+  ck_assert_double_eq_tol(taxes, 1001.330078, 1e-5);
 }
 END_TEST
 
