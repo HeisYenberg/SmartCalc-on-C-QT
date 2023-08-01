@@ -31,3 +31,9 @@ Credit calculator:
 
 - Input: total credit amount, term, interest rate, type (annuity, differentiated)
 - Output: monthly payment, overpayment on credit, total payment
+
+
+Deposit calculator:
+
+- Input: deposit amount, deposit term, interest rate, tax rate, periodicity of payments, capitalization of interest, replenishments list, partial withdrawals list
+- Output: accrued interest, tax amount, deposit amount by the end of the term
