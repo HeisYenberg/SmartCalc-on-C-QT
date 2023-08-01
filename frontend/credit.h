@@ -7,6 +7,10 @@ extern "C" {
 #include <math.h>
 };
 
+extern "C" {
+#include "../backend/calculate.h"
+};
+
 namespace Ui {
 class Credit;
 }

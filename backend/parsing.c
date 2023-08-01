@@ -46,10 +46,10 @@ char handle_unary_sign(char type, char last_read) {
   return type;
 }
 
-int read_mod(char *expression, int *possition) {
+int read_mod(char *expression, int *position) {
   int status = INCORRECT_EXPRESSION;
   if (!strncmp(expression, "mod", 3)) {
-    (*possition)++;
+    (*position)++;
     expression[2] = '%';
     status = OK;
   }
@@ -73,7 +73,8 @@ int read_binary_operation(char type, char *last_read, Stack **numbers,
                           Stack **operations, int *i) {
   int status = OK;
   int previous_rang = peek_rang(peek_type(*operations));
-  if (previous_rang && peek_rang(type) <= previous_rang) {
+  if (previous_rang && peek_rang(type) != 3 &&
+      peek_rang(type) <= previous_rang) {
     status = calculate(numbers, operations);
     (*i)--;
   } else {

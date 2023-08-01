@@ -12,6 +12,7 @@ TARGET = ../SmartCalc
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    ../backend/banking_calculations.c \
     ../backend/stack.c \
     ../backend/parsing.c \
     ../backend/calculate.c \
@@ -23,6 +24,7 @@ SOURCES += \
     qcustomplot.cpp
 
 HEADERS += \
+    ../backend/banking_calculations.h \
     ../backend/stack.h \
     ../backend/parsing.h \
     ../backend/calculate.h \

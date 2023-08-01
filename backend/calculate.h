@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "banking_calculations.h"
 #include "parsing.h"
 
 enum calculation_error {

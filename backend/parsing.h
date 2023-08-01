@@ -6,7 +6,7 @@
 int parse_expression(char* expression, double x, Stack** numbers,
                      Stack** operations);
 int read_digit(char* expression, double x, Stack** numbers);
-int read_mod(char* expression, int* possition);
+int read_mod(char* expression, int* position);
 char handle_unary_sign(char type, char last_read);
 int read_binary_operation(char type, char* last_read, Stack** numbers,
                           Stack** operations, int* i);

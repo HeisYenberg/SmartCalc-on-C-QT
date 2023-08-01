@@ -6,6 +6,8 @@
 #include "../backend/calculate.h"
 
 Suite *test_smart_calc();
+Suite *test_credit_calculator();
+Suite *test_deposit_calculator();
 
 static char test_binary_calculation[10][200] = {
     "21+(21+21)*21-21",
@@ -54,10 +56,10 @@ static char test_incorrect_expression[10][200] = {
     "21 ++++21", "sin (x,x)", "cos()",    "12.21 mo 12,21", "21.21."};
 
 static char test_calculation_error[10][200] = {
-    "-1^1.2",    "-21^-1.2",
     "asin(21)",  "asin(-21)",
     "acos(21)",  "acos(-21)",
-    "log(-21)",  "ln(-21)",
+    "log(-21)",  "log(-0.21)",
+    "ln(-21)",   "ln(-0.21)",
     "sqrt(-21)", "asin(acos(log(ln(sqrt(-21)))))"};
 
 #endif  // TESTS_H

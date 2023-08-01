@@ -46,6 +46,9 @@ QDoubleSpinBox::down-button { width: 20px;
 border: 0;
 }</string>
    </property>
+   <property name="maximum">
+    <double>9999999999999.000000000000000</double>
+   </property>
   </widget>
   <widget class="QDoubleSpinBox" name="interestRate">
    <property name="geometry">
@@ -76,6 +79,9 @@ border:0;
 QDoubleSpinBox::down-button { width: 20px;
 border: 0;
 }</string>
+   </property>
+   <property name="maximum">
+    <double>365.000000000000000</double>
    </property>
   </widget>
   <widget class="QLabel" name="label">
@@ -288,6 +294,9 @@ QSpinBox::down-button { width: 20px;
 border: 0;
 }</string>
    </property>
+   <property name="maximum">
+    <number>600</number>
+   </property>
   </widget>
   <widget class="QTextBrowser" name="output">
    <property name="geometry">
@@ -301,7 +310,7 @@ border: 0;
    <property name="styleSheet">
     <string notr="true">QTextBrowser {background-color: #323232;
 color: #ffffff;
-font: 24pt &quot;Sans Serif Collection&quot;;
+font: 14pt &quot;Sans Serif Collection&quot;;
 border-radius: 5%;
 margin: 2;
 }
