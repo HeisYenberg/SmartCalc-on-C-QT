@@ -1,6 +1,6 @@
-# SmartCalc v1.0
+# SmartCalc-on-C-QT
 
-## Implementation of SmartCalc v1.0.
+## Implementation of SmartCalc.
 
 ## Usage :
 
@@ -9,7 +9,7 @@
 - To see tests run `make test`, might need to install `check`
 - To see tests code coverage run `make gcov_report`, might need to install `lcov`
 
-### Overview of "SmartCalc v1.0" functions
+### Overview of "SmartCalc" functions
 
 | Operator name  | Arithmetic operators | Function description       | Functions |
 |----------------|----------------------|----------------------------|-----------|
@@ -32,8 +32,8 @@ Credit calculator:
 - Input: total credit amount, term, interest rate, type (annuity, differentiated)
 - Output: monthly payment, overpayment on credit, total payment
 
-
 Deposit calculator:
 
-- Input: deposit amount, deposit term, interest rate, tax rate, periodicity of payments, capitalization of interest, replenishments list, partial withdrawals list
+- Input: deposit amount, deposit term, interest rate, tax rate, periodicity of payments, capitalization of interest,
+  replenishments list, partial withdrawals list
 - Output: accrued interest, tax amount, deposit amount by the end of the term

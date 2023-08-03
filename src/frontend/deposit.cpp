@@ -36,8 +36,10 @@ void Deposit::on_depositAmount_valueChanged(double arg1) {
 }
 
 void Deposit::on_mothlyTerm_valueChanged(int arg1) {
-  ui->replenishmentMonth->setMaximum(arg1 - 1);
-  ui->withdrawalMonth->setMaximum(arg1 - 1);
+  if (arg1) {
+    ui->replenishmentMonth->setMaximum(arg1 - 1);
+    ui->withdrawalMonth->setMaximum(arg1 - 1);
+  }
 }
 
 void Deposit::on_calculateButton_clicked() {
